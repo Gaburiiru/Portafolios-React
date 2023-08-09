@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Press+Start+2P&display=swap");
+.nombre {
+  color: rgb(0, 200, 255);
+  text-shadow: 0 0 5px #3fadcb, 0 0 10px #3fadcb;
+  font-family: "Audiowide", cursive;
+}
+.apellido {
+  color: rgb(212, 0, 255);
+  text-shadow: 0 0 5px #c23fcb, 0 0 10px #c23fcb;
+  font-family: "Audiowide", cursive;
+}
+
+.subtitulos {
+  font-family: "Press Start 2P", cursive;
+}
