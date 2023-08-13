@@ -4,7 +4,7 @@ import "animate.css";
 function Educacion() {
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-indigo-300 text-4xl font-medium py-6 subtitulos hover:text-white animate__animated animate__wobble">
+      <h1 className="text-indigo-300 text-4xl py-6 subtitulos hover:text-white animate__animated animate__wobble">
         Educación
       </h1>
       <div className="grid gap-6 grid-cols-2 w-auto">

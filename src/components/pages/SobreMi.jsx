@@ -4,7 +4,7 @@ import "animate.css";
 function SobreMi() {
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-indigo-300 text-4xl font-medium py-6 subtitulos hover:text-white animate__animated animate__flip">
+      <h1 className="text-indigo-300 text-4xl py-6 subtitulos hover:text-white animate__animated animate__flip">
         Sobre mí
       </h1>
       <div className="grid gap-6 grid-cols-3">
@@ -81,7 +81,7 @@ function SobreMi() {
                 <img
                   src="\src\assets\img\java-icon.png"
                   className="w-14 px-2"
-                />{" "}
+                />
                 java
               </a>
             </li>
