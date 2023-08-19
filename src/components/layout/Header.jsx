@@ -76,7 +76,7 @@ function Header() {
           ) : (
             <a href="/Home">
               <img
-                src="/src/assets/img/yo.jpg"
+                src={assets.yo}
                 className="
                   m-4 w-40
                   rounded-full
