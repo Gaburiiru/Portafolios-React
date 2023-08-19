@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { proyectos } from "../../data/proyectos";
+import assets from "../../assets/assets";
 
 function Proyecto() {
   const [proyecto, setProyecto] = useState({});
@@ -46,12 +47,12 @@ function Proyecto() {
         <p className="text-white font-medium text-lg py-2">Enlace {proyecto.type}</p>
         <button className="bg-indigo-500 w-11 rounded-full shadow-xl shadow-indigo-600/30 animate__animated animate__rubberBand hover:bg-indigo-600 hover:shadow-indigo-500/30">
           <a href={"https://" + proyecto.url} target="_blank" rel="noreferrer">
-            <img src="\src\assets\img\hyperlink.png" className="p-2 " />
+            <img src={assets.enlace} className="p-2 " />
           </a>
         </button>
         <button className="bg-indigo-500 w-11 mx-4 rounded-full shadow-xl shadow-indigo-600/30 animate__animated animate__rubberBand hover:bg-indigo-600 hover:shadow-indigo-500/30">
           <a href={"https://" + proyecto.git} target="_blank" rel="noreferrer">
-            <img src="\src\assets\img\github.png" className="p-1" />
+            <img src={assets.github} className="p-1" />
           </a>
         </button>
       </div>

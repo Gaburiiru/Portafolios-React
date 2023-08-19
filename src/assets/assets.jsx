@@ -3,6 +3,7 @@ import github from '/src/assets/img/github.png'
 import linkedin from '/src/assets/img/linkedin.png'
 import instagram from '/src/assets/img/github.png'
 import correo from '/src/assets/img/correo.png'
+import enlace from '/src/assets/img/hyperlink.png'
 import react from '/src/assets/img/react-icon.png'
 import js from '/src/assets/img/js-icon.png'
 import kotlin from '/src/assets/img/kotlin-icon.jpg'
@@ -38,6 +39,7 @@ const assets = {
     linkedin,
     instagram,
     correo,
+    enlace,
     // lenguajes y herramientas
     react,
     js,
