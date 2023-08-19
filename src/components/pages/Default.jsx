@@ -1,4 +1,5 @@
 import React from "react";
+import assets from "../../assets/assets";
 
 function Default() {
   return (
@@ -20,7 +21,7 @@ function Default() {
       </h1>
       <div className="flex  flex-col items-center">
         <img
-          src="/src/assets/img/icon.jpg"
+          src={assets.icon}
           alt="icon"
           className="w-60 rounded-xl animate__animated animate__fadeIn"
         />

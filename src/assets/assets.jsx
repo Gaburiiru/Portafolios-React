@@ -28,7 +28,7 @@ import api_react_clima from '/src/assets/img/proyectos/api-react-clima.png'
 import games_break from '/src/assets/img/proyectos/games-break.png'
 import flecha_retroceder from '/src/assets/img/flecha-retroceder.png'
 import flecha_avanzar from '/src/assets/img/flecha-avanzar.png'
-
+import icon from '/src/assets/img/icon.jpg'
 
 const assets = {
     // header
@@ -65,7 +65,9 @@ const assets = {
     games_break,
     //flechitas carrusel
     flecha_retroceder,
-    flecha_avanzar
+    flecha_avanzar,
+    //default
+    icon
 }
 
 export default assets;
