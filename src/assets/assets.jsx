@@ -16,6 +16,16 @@ import php from '/src/assets/img/php-icon.png'
 import firebase from '/src/assets/img/firebase-icon.png'
 import bootstrap from '/src/assets/img/bootstrap-icon.png'
 import bash from '/src/assets/img/bash-icon.png'
+import cargarEmpleados from '/src/assets/img/proyectos/cargarEmpleados.png'
+import carritoDeFruta from '/src/assets/img/proyectos/carritoDeFruta.png'
+import colorPiker from '/src/assets/img/proyectos/colorPiker.png'
+import RickAndMorty from '/src/assets/img/proyectos/RickAndMorty.png'
+import alta_profesores_alumnos from '/src/assets/img/proyectos/alta-profesores-alumnos.png'
+import agregar_tareas from '/src/assets/img/proyectos/agregar-tareas.png'
+import agregar_tareas_react from '/src/assets/img/proyectos/agregar-tareas-con-react.png'
+import api_react_tienda from '/src/assets/img/proyectos/api-react-tienda.png'
+import api_react_clima from '/src/assets/img/proyectos/api-react-clima.png'
+import games_break from '/src/assets/img/proyectos/games-break.png'
 
 const assets = {
     // header
@@ -38,8 +48,18 @@ const assets = {
     bash,
     bootstrap,
     firebase,
-    python
-
+    python,
+    // proyectos
+    cargarEmpleados,
+    carritoDeFruta,
+    colorPiker,
+    RickAndMorty,
+    alta_profesores_alumnos,
+    agregar_tareas,
+    agregar_tareas_react,
+    api_react_tienda,
+    api_react_clima,
+    games_break
 }
 
 export default assets;
