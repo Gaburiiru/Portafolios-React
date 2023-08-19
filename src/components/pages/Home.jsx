@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "animate.css";
 import "../../assets/css/estilos.css";
+import assets from "../../assets/assets";
 
 function Home() {
   const [isAnimated, setIsAnimated] = useState(false);
@@ -55,7 +56,7 @@ function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="\src\assets\img\github.png" className="p-1" />
+              <img src={assets.github} className="p-1" />
             </a>
           </button>
           <button className="bg-indigo-500 w-11 mx-4 rounded-full shadow-xl shadow-indigo-600/30 animate__animated animate__rubberBand hover:bg-indigo-600 hover:shadow-indigo-500/30">
@@ -64,7 +65,7 @@ function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="\src\assets\img\linkedin.png" className="p-2" />
+              <img src={assets.linkedin} className="p-2" />
             </a>
           </button>
           <button className="bg-indigo-500 w-11 rounded-full shadow-xl shadow-indigo-600/30 animate__animated animate__rubberBand hover:bg-indigo-600 hover:shadow-indigo-500/30">
@@ -73,7 +74,7 @@ function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="\src\assets\img\instagram.png" className="p-2" />
+              <img src={assets.instagram} className="p-2" />
             </a>
           </button>
           <button
