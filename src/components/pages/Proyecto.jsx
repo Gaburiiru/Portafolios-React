@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { proyectos } from "../../data/proyectos";
 import assets from "../../assets/assets";
+import Default from './Default';
 
 function Proyecto() {
   const [proyecto, setProyecto] = useState({});
@@ -16,9 +17,14 @@ function Proyecto() {
     }
   }, [params.id]);
 
+  if (!proyecto.id) {
+    return <Default />;
+  }
+
+
   const categoriaColores = {
     "Android Studio": "bg-emerald-500 hover:shadow-emerald-600/70",
-    React: "bg-blue-950 hover:shadow-blue-950/80",
+    "React": "bg-blue-950 hover:shadow-blue-950/80",
     "Vanilla JavaScript": "bg-slate-950 hover:shadow-black/50",
   };
 

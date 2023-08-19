@@ -19,7 +19,7 @@ function Default() {
       >
         Ups.. pagina no encontrada!
       </h1>
-      <div className="flex  flex-col items-center">
+      <div className="flex  flex-col items-center sm:w-128 bg-gray-950 rounded-xl p-4">
         <img
           src={assets.icon}
           alt="icon"
