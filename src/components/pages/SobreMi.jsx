@@ -1,3 +1,5 @@
+import assets from "../../assets/assets";
+
 function SobreMi() {
   return (
     <div className="flex flex-col items-center space-y-0 mb-40">
@@ -53,7 +55,7 @@ function SobreMi() {
                 className="flex items-center p-2 hover:text-indigo-500"
               >
                 <img
-                  src="\src\assets\img\react-icon.png"
+                  src={assets.react}
                   className="w-14 px-2"
                 />
                 React
@@ -64,7 +66,7 @@ function SobreMi() {
                 href="https://es.wikipedia.org/wiki/JavaScript"
                 className="flex items-center p-2 hover:text-indigo-500"
               >
-                <img src="\src\assets\img\js-icon.png" className="w-12 px-2" />
+                <img src={assets.js} className="w-12 px-2" />
                 JavaScript
               </a>
             </li>
@@ -74,7 +76,7 @@ function SobreMi() {
                 className="flex items-center p-2 hover:text-indigo-500"
               >
                 <img
-                  src="\src\assets\img\kotlin-icon.jpg"
+                  src={assets.kotlin}
                   className="w-12 px-2"
                 />
                 Kotlin
@@ -86,7 +88,7 @@ function SobreMi() {
                 className="flex items-center p-2 hover:text-indigo-500"
               >
                 <img
-                  src="\src\assets\img\java-icon.png"
+                  src={assets.java}
                   className="w-14 px-2"
                 />
                 java
