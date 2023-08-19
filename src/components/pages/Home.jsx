@@ -81,7 +81,7 @@ function Home() {
             onClick={copiarCorreo}
             className="bg-indigo-500 w-11 mx-4 rounded-full shadow-xl shadow-indigo-600/30 animate__animated animate__rubberBand hover:bg-indigo-600 hover:shadow-indigo-500/30"
           >
-            <img src="\src\assets\img\correo.png" className="p-2" />
+            <img src={assets.correo} className="p-2" />
           </button>
           {copiado && (
             <p className="text-white text-lg bg-black/50 w-fit p-2 rounded-xl inline">
