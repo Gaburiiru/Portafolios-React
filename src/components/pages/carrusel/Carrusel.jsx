@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { proyectos } from "../../../data/proyectos";
 import estilos from "./carrusel.module.css";
 import { Link } from "react-router-dom";
+import assets from "../../../assets/assets";
 
 function Carrusel() {
   const ultimosProyectos = proyectos
@@ -33,7 +34,7 @@ function Carrusel() {
           )
         }
       >
-        <img src="src\assets\img\flecha-retroceder.png" alt="retroceder" />
+        <img src={assets.flecha_retroceder} alt="retroceder" />
       </button>
       {ultimosProyectos.map((proyecto, index) => (
         <div
@@ -70,7 +71,7 @@ function Carrusel() {
           )
         }
       >
-        <img src="src\assets\img\flecha-avanzar.png" alt="avanzar" />
+        <img src={assets.flecha_avanzar} alt="avanzar" />
       </button>
     </div>
   );
