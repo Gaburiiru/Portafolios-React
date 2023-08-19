@@ -1,5 +1,7 @@
 import React from "react";
 import "animate.css";
+import assets from "../../assets/assets";
+
 
 function Educacion() {
   return (
@@ -62,10 +64,12 @@ function Educacion() {
                 <li>
                   <a
                     href="https://es.wikipedia.org/wiki/JavaScript"
+                    target="_blank"
+                    rel="noreferrer"
                     className="flex items-center p-2 hover:text-indigo-500"
                   >
                     <img
-                      src="\src\assets\img\js-icon.png"
+                      src={assets.js}
                       className="w-12 px-2"
                     />
                     JavaScript
@@ -73,11 +77,13 @@ function Educacion() {
                 </li>
                 <li>
                   <a
-                    href="https://es.wikipedia.org/wiki/JavaScript"
+                    href="https://es.wikipedia.org/wiki/CSS"
+                    target="_blank"
+                    rel="noreferrer"
                     className="flex items-center p-2 hover:text-indigo-500"
                   >
                     <img
-                      src="\src\assets\img\css-icon.png"
+                      src={assets.css}
                       className="w-12 px-2"
                     />
                     CSS
@@ -85,11 +91,13 @@ function Educacion() {
                 </li>
                 <li>
                   <a
-                    href="https://es.wikipedia.org/wiki/JavaScript"
+                    href="https://es.wikipedia.org/wiki/HTML"
+                    target="_blank"
+                    rel="noreferrer"
                     className="flex items-center p-2 hover:text-indigo-500"
                   >
                     <img
-                      src="\src\assets\img\html-icon.png"
+                      src={assets.html}
                       className="w-12 px-2"
                     />
                     HTML
@@ -97,11 +105,13 @@ function Educacion() {
                 </li>
                 <li>
                   <a
-                    href="https://es.wikipedia.org/wiki/JavaScript"
+                    href="https://es.wikipedia.org/wiki/SQL"
+                    target="_blank"
+                    rel="noreferrer"
                     className="flex items-center p-2 hover:text-indigo-500"
                   >
                     <img
-                      src="\src\assets\img\sql-icon.png"
+                      src={assets.sql}
                       className="w-12 px-2"
                     />
                     SQL
@@ -109,11 +119,13 @@ function Educacion() {
                 </li>
                 <li>
                   <a
-                    href="https://es.wikipedia.org/wiki/JavaScript"
+                    href="https://es.react.dev/"
+                    target="_blank"
+                    rel="noreferrer"
                     className="flex items-center p-2 hover:text-indigo-500"
                   >
                     <img
-                      src="\src\assets\img\react-icon.png"
+                      src={assets.react}
                       className="w-12 px-2"
                     />
                     REACT
@@ -121,11 +133,13 @@ function Educacion() {
                 </li>
                 <li>
                   <a
-                    href="https://es.wikipedia.org/wiki/JavaScript"
+                    href="https://getbootstrap.com/"
+                    target="_blank"
+                    rel="noreferrer"
                     className="flex items-center p-2 hover:text-indigo-500"
                   >
                     <img
-                      src="\src\assets\img\bootstrap-icon.png"
+                      src={assets.bootstrap}
                       className="w-12 px-2"
                     />
                     Bootstrap
@@ -140,11 +154,13 @@ function Educacion() {
                 </p>
                 <li>
                   <a
-                    href="https://es.wikipedia.org/wiki/JavaScript"
+                    href="https://www.microsoft.com/es-es/sql-server/sql-server-downloads"
+                    target="_blank"
+                    rel="noreferrer"
                     className="flex items-center p-2 hover:text-indigo-500"
                   >
                     <img
-                      src="\src\assets\img\sqlServer-icon.png"
+                      src={assets.sql_server}
                       className="w-12 px-2"
                     />
                     SQL Server
@@ -152,11 +168,13 @@ function Educacion() {
                 </li>
                 <li>
                   <a
-                    href="https://es.wikipedia.org/wiki/JavaScript"
+                    href="https://www.python.org/"
+                    target="_blank"
+                    rel="noreferrer"
                     className="flex items-center p-2 hover:text-indigo-500"
                   >
                     <img
-                      src="\src\assets\img\python-icon.png"
+                      src={assets.python}
                       className="w-12 px-2"
                     />
                     Python
@@ -164,11 +182,13 @@ function Educacion() {
                 </li>
                 <li>
                   <a
-                    href="https://es.wikipedia.org/wiki/JavaScript"
+                    href="https://www.java.com/es/"
+                    target="_blank"
+                    rel="noreferrer"
                     className="flex items-center p-2 hover:text-indigo-500"
                   >
                     <img
-                      src="\src\assets\img\java-icon.png"
+                      src={assets.java}
                       className="w-12 px-2"
                     />
                     Java
@@ -176,11 +196,13 @@ function Educacion() {
                 </li>
                 <li>
                   <a
-                    href="https://es.wikipedia.org/wiki/JavaScript"
+                    href="https://kotlinlang.org/"
+                    target="_blank"
+                    rel="noreferrer"
                     className="flex items-center p-2 hover:text-indigo-500"
                   >
                     <img
-                      src="\src\assets\img\kotlin-icon.jpg"
+                      src={assets.kotlin}
                       className="w-12 px-2"
                     />
                     Kotlin
@@ -188,11 +210,13 @@ function Educacion() {
                 </li>
                 <li>
                   <a
-                    href="https://es.wikipedia.org/wiki/JavaScript"
+                    href="https://www.php.net/manual/es/intro-whatis.php"
+                    target="_blank"
+                    rel="noreferrer"
                     className="flex items-center p-2 hover:text-indigo-500"
                   >
                     <img
-                      src="\src\assets\img\php-icon.png"
+                      src={assets.php}
                       className="w-12 px-2"
                     />
                     PHP
@@ -200,11 +224,13 @@ function Educacion() {
                 </li>
                 <li>
                   <a
-                    href="https://es.wikipedia.org/wiki/JavaScript"
+                    href="https://firebase.google.com/?hl=es"
+                    target="_blank"
+                    rel="noreferrer"
                     className="flex items-center p-2 hover:text-indigo-500"
                   >
                     <img
-                      src="\src\assets\img\firebase-icon.png"
+                      src={assets.firebase}
                       className="w-12 px-2"
                     />
                     Firebase
@@ -212,11 +238,13 @@ function Educacion() {
                 </li>
                 <li>
                   <a
-                    href="https://es.wikipedia.org/wiki/JavaScript"
+                    href="https://es.wikipedia.org/wiki/Bash"
+                    target="_blank"
+                    rel="noreferrer"
                     className="flex items-center p-2 hover:text-indigo-500"
                   >
                     <img
-                      src="\src\assets\img\bash-icon.png"
+                      src={assets.bash}
                       className="w-12 px-2"
                     />
                     Bash
