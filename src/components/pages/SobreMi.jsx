@@ -1,5 +1,6 @@
 import React from "react";
 import assets from "../../assets/assets";
+import "animate.css";
 
 function SobreMi() {
   return (
@@ -53,6 +54,8 @@ function SobreMi() {
             <li>
               <a
                 href="https://es.react.dev/"
+                target="_blank"
+                rel="noreferrer"
                 className="flex items-center p-2 hover:text-indigo-500"
               >
                 <img
@@ -65,6 +68,8 @@ function SobreMi() {
             <li>
               <a
                 href="https://es.wikipedia.org/wiki/JavaScript"
+                target="_blank"
+                rel="noreferrer"
                 className="flex items-center p-2 hover:text-indigo-500"
               >
                 <img src={assets.js} className="w-12 px-2" />
@@ -74,6 +79,8 @@ function SobreMi() {
             <li>
               <a
                 href="https://kotlinlang.org/"
+                target="_blank"
+                rel="noreferrer"
                 className="flex items-center p-2 hover:text-indigo-500"
               >
                 <img
@@ -86,6 +93,8 @@ function SobreMi() {
             <li>
               <a
                 href="https://www.java.com/es/"
+                target="_blank"
+                rel="noreferrer"
                 className="flex items-center p-2 hover:text-indigo-500"
               >
                 <img
