@@ -52,9 +52,9 @@ function Header() {
         min-h-screen 
         lg:flex 
         lg:flex-col 
-        py-48
+        py-40
         
-        ${menuOpen ? "block w-full absolute z-10 h-full py-16" : "hidden"}`}
+        ${menuOpen ? "block w-full absolute z-10 h-full" : "hidden"}`}
       >
         <div className="grid justify-center">
           {is2xl ? (
