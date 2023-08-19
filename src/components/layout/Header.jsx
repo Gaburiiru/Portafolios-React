@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Outlet, Link, NavLink } from "react-router-dom";
 import { useMediaQuery } from "@react-hook/media-query";
+import yo from '/src/assets/img/yo.jpg'
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -60,7 +61,7 @@ function Header() {
           {is2xl ? (
             <Link to="/Home">
               <img
-                src="/src/assets/img/yo.jpg"
+                src={yo}
                 className="
                   m-4 w-40
                   rounded-full
