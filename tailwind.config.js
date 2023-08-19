@@ -7,13 +7,14 @@ export default {
   theme: {
     extend: {
       width: {
-        '128': '40rem',
+        '128': '35rem',
         '155': '55rem',
         '170': '70rem',
       },
       height:{
         '153': '53rem',
       }
+      
     },
   },
   plugins: [],

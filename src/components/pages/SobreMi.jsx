@@ -1,14 +1,21 @@
-import React from "react";
-import "animate.css";
-
 function SobreMi() {
   return (
-    <div className="flex flex-col items-center">
-      <h1 className="text-indigo-300 text-4xl py-6 subtitulos hover:text-white animate__animated animate__flip">
+    <div className="flex flex-col items-center space-y-0 mb-40">
+      <h1
+        className="
+          text-indigo-300
+          py-6
+          subtitulos
+          hover:text-white
+          animate__animated
+          animate__flip
+          text-3xl
+          sm:text-4xl
+        ">
         Sobre mí
       </h1>
-      <div className="grid gap-6 grid-cols-3">
-        <div className="bg-red-400 opacity-70 w-96 p-6 text-center font-normal text-lg text-white h-fit rounded-2xl hover:scale-110 hover:z-40 hover:opacity-100 shadow-xl hover:shadow-red-500/40">
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 m-4">
+        <div className="sm:w-96 bg-red-400 opacity-70 p-6 text-center font-normal text-lg text-white h-fit rounded-2xl sm:hover:scale-110 sm:hover:z-40 hover:opacity-100 shadow-xl hover:shadow-red-500/40">
           <h2 className=" text-3xl p-2">Presentación</h2>
           <p>
             Hola, soy Gabo. Encantado de conocerte Desde que emprendí mi camino
@@ -24,7 +31,7 @@ function SobreMi() {
             constante con la mejora de mis habilidades.
           </p>
         </div>
-        <div className="bg-cyan-400 opacity-70 hover:opacity-100 w-96 p-6 text-center font-normal text-lg text-white h-fit rounded-2xl hover:scale-125 hover:z-40 shadow-xl hover:shadow-cyan-500/40">
+        <div className="sm:w-96 bg-cyan-400 opacity-70 hover:opacity-100 p-6 text-center font-normal text-lg text-white h-fit rounded-2xl sm:hover:scale-110 sm:hover:z-40 shadow-xl hover:shadow-cyan-500/40">
           <h2 className=" text-3xl p-2">Información</h2>
           <p>🗿 Tengo 21 años</p>
           <p>🎧 Me gusta la música</p>
@@ -32,7 +39,7 @@ function SobreMi() {
           <p>🎮 Me gustan los videojuegos</p>
           <p>💻 Me gusta la tecnología y la Programación</p>
         </div>
-        <div className="bg-emerald-400 opacity-70 hover:opacity-100 w-96 p-6 text-center font-normal text-lg text-white h-fit rounded-2xl hover:scale-125 hover:z-40 shadow-xl hover:shadow-emerald-500/40">
+        <div className="sm:w-96 bg-emerald-400 opacity-70 hover:opacity-100 p-6 text-center font-normal text-lg text-white h-fit rounded-2xl sm:hover:scale-110 sm:hover:z-40 shadow-xl hover:shadow-emerald-500/40">
           <h2 className=" text-3xl p-2">Actualmente</h2>
           <p>
             Estoy estudiando en la universidad Desarrollo de aplicaciones

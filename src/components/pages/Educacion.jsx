@@ -4,39 +4,57 @@ import "animate.css";
 function Educacion() {
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-indigo-300 text-4xl py-6 subtitulos hover:text-white animate__animated animate__wobble">
+      <h1
+        className="
+          text-indigo-300
+          text-3xl
+          sm:text-4xl
+          py-6
+          subtitulos
+          hover:text-white
+          animate__animated
+          animate__wobble
+        "
+      >
         Educación
       </h1>
-      <div className="grid gap-6 grid-cols-2 w-auto">
-        <div className="mx-auto bg-violet-500 opacity-70 hover:opacity-100 w-128 h-fit p-6 text-center font-normal text-lg text-white rounded-2xl hover:scale-110 hover:z-40 shadow-xl hover:shadow-violet-500/40">
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-1 xl:grid-cols-2 m-4">
+        <div className="mx-auto sm:w-128 bg-violet-500 opacity-70 hover:opacity-100 h-fit p-6 text-center font-normal text-lg text-white rounded-2xl sm:hover:scale-110 sm:hover:z-40 shadow-xl hover:shadow-violet-500/40">
           <h2 className="text-3xl p-2">Mis estudios</h2>
           <p>
             Realize mis estudios secundarios en la Tecnica N°14, Poseo el titulo
             secundario de
             <a href="https://www.facebook.com/tecnica.catorce/?locale=es_LA">
-              <b className="hover:text-indigo-600">Tecnico en Programacion (2013-2020).</b>
+              <b className="hover:text-indigo-600">
+                Tecnico en Programacion (2013-2020).
+              </b>
               🎓
             </a>
           </p>
           <p>
             Realize una diplomatura en la CUDI de
             <a href="https://www.cudi.ar/oferta-academica/area-diplomaturas/desarrollo-de-software/">
-              <b className="hover:text-indigo-600"> Desarrollo de Software WEB (2021-2022).</b>
+              <b className="hover:text-indigo-600">
+                {" "}
+                Desarrollo de Software WEB (2021-2022).
+              </b>
               💻
             </a>
           </p>
           <p>
             Actualmente estudio una tecnicatura universitaria en la UNLAM de
             <a href="https://www.unlam.edu.ar/index.php?seccion=3&idArticulo=670">
-              <b className="hover:text-indigo-600">Desarrollo de Aplicaciones Móviles (2021-Actual).</b>
+              <b className="hover:text-indigo-600">
+                Desarrollo de Aplicaciones Móviles (2021-Actual).
+              </b>
               ☎️
             </a>
           </p>
         </div>
-        <div className="mx-auto bg-lime-400 opacity-70 hover:opacity-100 w-128 p-6 text-center font-normal text-lg text-white h-fit rounded-2xl hover:scale-110 hover:z-40 shadow-xl hover:shadow-lime-500/40">
+        <div className="mx-auto sm:w-128 bg-lime-400 opacity-70 hover:opacity-100 p-6 text-center font-normal text-lg text-white h-fit rounded-2xl sm:hover:scale-110 sm:hover:z-40 shadow-xl hover:shadow-lime-500/40 mb-40">
           <h2 className="text-3xl p-2">Tecnologías</h2>
-          <div className="grid grid-cols-2">
-            <div>
+          <div className="grid grid-cols-1 sm:grid-cols-2">
+            <div >
               <ul>
                 <p className="py-2">
                   <b>Para realizar paginas web utilizo:</b>

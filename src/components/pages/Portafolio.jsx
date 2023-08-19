@@ -5,7 +5,18 @@ import Carrusel from "./carrusel/Carrusel";
 function Portafolio() {
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-indigo-300 text-4xl py-6 subtitulos hover:text-white animate__animated animate__swing">
+      <h1
+        className="
+        text-indigo-300 
+          py-6 
+          subtitulos 
+        hover:text-white 
+          animate__animated 
+          animate__swing
+          text-3xl
+          sm:text-4xl
+        "
+      >
         Portafolio
       </h1>
 

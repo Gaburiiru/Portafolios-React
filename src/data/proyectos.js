@@ -7,6 +7,7 @@ export const proyectos = [
     "image":"/src/assets/img/proyectos/cargarEmpleados.png",
     "category": "Vanilla JavaScript",
     "tecnology":"HTML, CSS, JavaScript",
+    "type":"Pagina Web",
     "description": "Ingresas nombre y puesto de trabajo del empleado, el mismo se puede modificar y eliminar."
   },
   {
@@ -17,6 +18,7 @@ export const proyectos = [
     "image":"/src/assets/img/proyectos/carritoDeFruta.png",
     "category": "Vanilla JavaScript",
     "tecnology":"HTML, CSS, JavaScript",
+    "type":"Pagina Web",
     "description": "Seleccionas la fruta que queres y se te guarda a tu carrito modificando la cantidad y actualizando el coste total."
   },
   {
@@ -27,6 +29,7 @@ export const proyectos = [
     "image":"/src/assets/img/proyectos/colorPiker.png",
     "category": "Vanilla JavaScript",
     "tecnology":"HTML, CSS, JavaScript",
+    "type":"Pagina Web",
     "description": "Selecionas el color que queres y te lo genera a formato hexadecimal, además de que se te guarda al portapapaeles."
   },
   {
@@ -37,6 +40,7 @@ export const proyectos = [
     "image":"/src/assets/img/proyectos/RickAndMorty.png",
     "category": "Vanilla JavaScript",
     "tecnology":"HTML, CSS, JavaScript",
+    "type":"Pagina Web",
     "description": "Extrae de la api de rick and morty el json, para visualizar los personajes en tarjetas."
   },
   {
@@ -47,6 +51,7 @@ export const proyectos = [
     "image":"/src/assets/img/proyectos/alta-profesores-alumnos.png",
     "category": "Vanilla JavaScript",
     "tecnology":"HTML, CSS, JavaScript",
+    "type":"Pagina Web",
     "description": "Se puede agregar alumnos y profesores para modificar su estado de aprobacion."
   },
   {
@@ -57,6 +62,7 @@ export const proyectos = [
     "image":"/src/assets/img/proyectos/agregar-tareas.png",
     "category": "Vanilla JavaScript",
     "tecnology":"HTML, CSS, JavaScript",
+    "type":"Pagina Web",
     "description": "Se puede agregar tareas y eliminarlas, esta hecho con LocalStorage por lo que se puede actualizar la pagina y no perder la informacion."
   },
   {
@@ -67,6 +73,7 @@ export const proyectos = [
     "image":"/src/assets/img/proyectos/agregar-tareas-con-react.png",
     "category": "React",
     "tecnology":"HTML, Tailwind CSS, React",
+    "type":"Pagina Web",
     "description": "Ingresas nombre de la tarea y la descripcion de está, el mismo se puede eliminar."
   },
   {
@@ -77,6 +84,7 @@ export const proyectos = [
     "image":"/src/assets/img/proyectos/api-react-tienda.png",
     "category": "React",
     "tecnology":"HTML, Tailwind CSS, React",
+    "type":"Pagina Web",
     "description": "Se puede realizar una busqueda de productos y agregarlos a tu carrito de compras, asi tambien eliminar dichos productos, para traer los productos de la api se implementa redux."
   },
   {
@@ -87,16 +95,18 @@ export const proyectos = [
     "image":"/src/assets/img/proyectos/api-react-clima.png",
     "category": "React",
     "tecnology":"HTML, Tailwind CSS, React",
+    "type":"Pagina Web",
     "description": "Se puede realizar una busqueda del clima por ciudad y pais, luego de utilizar la api para traer los datos del clima, estos se guardan en el store y se pueden mostrar como busquedas pasadas.Posee modo dark con context api."
   },
   {
     "id": 10,
-    "name": "Games break",
-    "url": "HOLA XD",
+    "name": "Games Break",
+    "url": "drive.google.com/file/d/1SHjqRbxYYgpaTtYnFtmHPxdteRPBECZS/view?usp=sharing",
     "git": "github.com/Gaburiiru/Mi-primera-APP-Movil",
     "image":"/src/assets/img/proyectos/games-break.png",
     "category": "Android Studio",
     "tecnology":"Kotlin, Android Studio",
+    "type":"APK",
     "description": "Esta APP tiene como objetivo permitir a los usuarios elegir un intermediario de pago para sus compras. La app cuenta con funciones de inicio de sesión, CRUD (Crear, Leer, Actualizar, Eliminar), y hace uso de Activities, Fragments, RecyclerView y diversas bibliotecas como calendar y Glide."
   }
 ]

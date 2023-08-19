@@ -26,15 +26,16 @@ function Home() {
 
   return (
     <>
-      <div className="text-left">
+      <div className="text-left space-y-0 mb-40">
         <p
-          className={`nombre text-9xl animate__animated ${
+          className={`nombre text-6xl sm:text-9xl py-10 p-4 animate__animated
+          ${
             isAnimated ? "animate__flash" : ""
           }`}
         >
           Gabriel <span className="apellido inline">Ricardes</span>
         </p>
-        <p className="text-indigo-300 text-4xl py-6 font-mono animate__animated animate__flipInX hover:text-white">
+        <p className="text-indigo-300 text-2xl sm:text-4xl p-4 font-mono animate__animated animate__flipInX hover:text-white">
           Bienvenido a mi portafolio de desarrollador
         </p>
         <a
@@ -42,12 +43,12 @@ function Home() {
           target="_blank"
           rel="noreferrer"
         >
-          <button className="shadow-xl shadow-indigo-600/30 rounded-full w-fit h-fit p-2 px-4 text-white bg-indigo-500 font-mono animate__animated animate__bounce hover:bg-indigo-600 hover:shadow-indigo-500/30">
+          <button className="shadow-xl shadow-indigo-600/30 rounded-full w-fit h-fit p-2 px-4 m-4 text-white bg-indigo-500 font-mono animate__animated animate__bounce hover:bg-indigo-600 hover:shadow-indigo-500/30">
             Descargar mi CV
           </button>
         </a>
 
-        <div className="py-6">
+        <div className="p-4">
           <button className="bg-indigo-500 w-11 rounded-full shadow-xl shadow-indigo-600/30 animate__animated animate__rubberBand hover:bg-indigo-600 hover:shadow-indigo-500/30">
             <a
               href="https://github.com/Gaburiiru"

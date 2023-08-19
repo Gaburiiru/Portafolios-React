@@ -7,6 +7,7 @@ import SobreMi from "../pages/SobreMi";
 import Educacion from "../pages/Educacion";
 import ListadoProyectos from "../pages/ListadoProyectos";
 import Portafolio from "../pages/Portafolio";
+import PortafolioMobile from "../pages/PortafolioMobile";
 import Proyecto from "../pages/Proyecto";
 import Contacto from "../pages/Contacto";
 import Default from "../pages/Default";
@@ -22,6 +23,7 @@ export const MisRutas = () => {
           <Route path="SobreMi" element={<SobreMi />} />
           <Route path="Educacion" element={<Educacion />} />
           <Route path="Portafolio" element={<Portafolio />} />
+          <Route path="PortafolioMobile" element={<PortafolioMobile />} />
           <Route path="ListadoProyectos" element={<ListadoProyectos />} />
           <Route path="/proyecto/:id" element={<Proyecto />} />
           <Route path="Contacto" element={<Contacto />} />

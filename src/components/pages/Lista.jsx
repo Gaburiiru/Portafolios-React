@@ -8,9 +8,9 @@ function Lista({ category }) {
   );
 
   return (
-    <div className="flex flex-col justify-center items-center w-128 h-fit text-white ">
+    <div className="text-white">
       <p className="font-mono text-2xl">
-        Proyectos realizados con <b>{category}</b>
+        Proyectos realizados con <b className="italic">{category}</b>
       </p>
       {proyectosFiltrados.map(proyecto => (
         <article key={proyecto.id}>
