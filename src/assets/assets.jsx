@@ -17,6 +17,10 @@ import php from '/src/assets/img/php-icon.png'
 import firebase from '/src/assets/img/firebase-icon.png'
 import bootstrap from '/src/assets/img/bootstrap-icon.png'
 import bash from '/src/assets/img/bash-icon.png'
+import flecha_retroceder from '/src/assets/img/flecha-retroceder.png'
+import flecha_avanzar from '/src/assets/img/flecha-avanzar.png'
+import icon from '/src/assets/img/icon.jpg'
+//proyectos
 import cargarEmpleados from '/src/assets/img/proyectos/cargarEmpleados.png'
 import carritoDeFruta from '/src/assets/img/proyectos/carritoDeFruta.png'
 import colorPiker from '/src/assets/img/proyectos/colorPiker.png'
@@ -27,9 +31,8 @@ import agregar_tareas_react from '/src/assets/img/proyectos/agregar-tareas-con-r
 import api_react_tienda from '/src/assets/img/proyectos/api-react-tienda.png'
 import api_react_clima from '/src/assets/img/proyectos/api-react-clima.png'
 import games_break from '/src/assets/img/proyectos/games-break.png'
-import flecha_retroceder from '/src/assets/img/flecha-retroceder.png'
-import flecha_avanzar from '/src/assets/img/flecha-avanzar.png'
-import icon from '/src/assets/img/icon.jpg'
+import api_react_mapa from '/src/assets/img/proyectos/api-mapa-react.png'
+
 
 const assets = {
     // header
@@ -65,6 +68,7 @@ const assets = {
     api_react_tienda,
     api_react_clima,
     games_break,
+    api_react_mapa,
     //flechitas carrusel
     flecha_retroceder,
     flecha_avanzar,
