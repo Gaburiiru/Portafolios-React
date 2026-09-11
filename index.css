@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  background-color: #0a0316;
+  background-image: radial-gradient(rgba(5,217,232,0.14) 1px, transparent 1px);
+  background-size: 28px 28px;
+  overflow-x: hidden;
+}
+
+body {
+  color: #e8e2ff;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+::selection {
+  background: #ff2bd6;
+  color: #0a0316;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0316;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #05d9e8, #ff2bd6);
+  border-radius: 8px;
+}
+
+/* ---------- Scanline overlay ---------- */
+.scanlines::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.035) 0px,
+    rgba(255, 255, 255, 0.035) 1px,
+    transparent 2px,
+    transparent 3px
+  );
+  mix-blend-mode: overlay;
+}
+
+.scanlines::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 61;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.55) 100%);
+}
+
+/* ---------- Grid floor (synthwave) ---------- */
+.grid-floor {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 55%;
+  background-image:
+    linear-gradient(to top, rgba(10,3,22,1) 0%, rgba(10,3,22,0) 60%),
+    linear-gradient(rgba(255,43,214,0.55) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(5,217,232,0.4) 1px, transparent 1px);
+  background-size: 100% 100%, 60px 60px, 60px 60px;
+  transform: perspective(220px) rotateX(60deg);
+  transform-origin: bottom;
+  animation: grid 3.5s linear infinite;
+  opacity: 0.7;
+}
+
+.sun {
+  position: absolute;
+  left: 50%;
+  top: 8%;
+  width: 320px;
+  height: 320px;
+  transform: translateX(-50%);
+  border-radius: 9999px;
+  background: linear-gradient(to bottom, #f9f002 0%, #ff9d5c 35%, #ff2bd6 65%, #a239ea 100%);
+  box-shadow: 0 0 80px rgba(255,43,214,0.45), 0 0 140px rgba(5,217,232,0.25);
+  overflow: hidden;
+}
+.sun::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 8px,
+    #0a0316 8px,
+    #0a0316 13px
+  );
+  opacity: 0.9;
+  mask-image: linear-gradient(to bottom, transparent 40%, black 45%);
+}
+
+/* ---------- Glitch title ---------- */
+.glitch {
+  position: relative;
+  color: #fff;
+  text-shadow: 0 0 12px rgba(5,217,232,0.5);
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+.glitch::before {
+  color: #05d9e8;
+  clip-path: inset(0 0 60% 0);
+  animation: glitchTop 3.5s infinite linear alternate-reverse;
+}
+.glitch::after {
+  color: #ff2bd6;
+  clip-path: inset(60% 0 0 0);
+  animation: glitchBottom 2.7s infinite linear alternate-reverse;
+}
+@keyframes glitchTop {
+  0%, 92%, 100% { transform: translate(0, 0); }
+  93% { transform: translate(-3px, -1px); }
+  95% { transform: translate(3px, 1px); }
+  97% { transform: translate(-2px, 1px); }
+}
+@keyframes glitchBottom {
+  0%, 90%, 100% { transform: translate(0, 0); }
+  91% { transform: translate(3px, 1px); }
+  94% { transform: translate(-3px, -1px); }
+  98% { transform: translate(2px, -1px); }
+}
+
+/* ---------- Section labels ---------- */
+.tag-label {
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: 0.2em;
+  color: #05d9e8;
+}
+
+/* ---------- Neon border card (bioglass) ---------- */
+.neon-card {
+  position: relative;
+  background: rgba(21, 10, 46, 0.42);
+  border: 1px solid rgba(5, 217, 232, 0.25);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  isolation: isolate;
+}
+.neon-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 45%);
+  pointer-events: none;
+  z-index: -1;
+}
+.neon-card:hover {
+  border-color: rgba(255, 43, 214, 0.7);
+  box-shadow: 0 0 10px rgba(255,43,214,0.35), 0 0 30px rgba(5,217,232,0.2);
+  transform: translateY(-4px);
+}
+
+/* ---------- Ambient background sun (blurred, always present) ---------- */
+.ambient-sun {
+  filter: blur(70px);
+  opacity: 0.32;
+}
+.ambient-grid {
+  filter: blur(18px);
+  opacity: 0.22;
+}
+
+/* ---------- Marquee ---------- */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 26s linear infinite;
+}
+
+/* ---------- Blink cursor ---------- */
+.blink-cursor::after {
+  content: "_";
+  animation: flicker 1s steps(2) infinite;
+  color: #ff2bd6;
+}
+
+/* ---------- Underline link ---------- */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.25s ease;
+}
+.link-underline:hover::after {
+  width: 100%;
+}
