@@ -32,7 +32,7 @@ export default function Nav() {
           GABO<span className="text-neonpink">.</span>DEV
         </a>
 
-        <ul className="hidden lg:flex items-center gap-7 font-mono text-xs tracking-widest">
+        <ul className="hidden xl:flex items-center gap-7 font-mono text-xs tracking-widest">
           {LINKS.map((l) => (
             <li key={l.href}>
               <a href={l.href} className="text-neoncyan/80 hover:text-neonpink link-underline">
@@ -45,13 +45,13 @@ export default function Nav() {
         <a
           href="/Gabriel_Ricardes_CV.pdf"
           download
-          className="hidden lg:flex items-center gap-2 text-xs font-mono border border-neonpink/60 text-neonpink px-3 py-2 rounded hover:bg-neonpink/10 hover:shadow-neonpink transition"
+          className="hidden xl:flex items-center gap-2 text-xs font-mono border border-neonpink/60 text-neonpink px-3 py-2 rounded hover:bg-neonpink/10 hover:shadow-neonpink transition"
         >
           <FaDownload size={12} /> CV
         </a>
 
         <button
-          className="lg:hidden text-white text-xl"
+          className="xl:hidden text-white text-xl"
           onClick={() => setOpen((o) => !o)}
           aria-label="Abrir menú"
         >
@@ -60,7 +60,7 @@ export default function Nav() {
       </nav>
 
       {open && (
-        <div className="lg:hidden bg-void/95 backdrop-blur border-t border-neoncyan/20 px-5 py-6 flex flex-col gap-5">
+        <div className="xl:hidden bg-void/95 backdrop-blur border-t border-neoncyan/20 px-5 py-6 flex flex-col gap-5">
           {LINKS.map((l) => (
             <a
               key={l.href}

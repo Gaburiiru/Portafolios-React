@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FaTerminal, FaTimes } from "react-icons/fa";
-import { getVisits, bumpCoffees } from "../utils/visits";
 import { personal } from "../data/content";
 
 const JOKES = [
@@ -42,7 +41,7 @@ export default function Terminal() {
   useEffect(() => {
     if (open) {
       setLines([
-        { type: "out", text: `sesión iniciada — sos la visita acumulada #${getVisits()} en este navegador` },
+        { type: "out", text: "sesión iniciada — bienvenido/a a GABO_TERMINAL" },
         { type: "out", text: "escribí 'help' para ver qué podés hacer acá adentro (↑/↓ recorren el historial, Tab autocompleta)" },
       ]);
       historyPos.current = null;
@@ -119,8 +118,7 @@ export default function Terminal() {
     } else if (cmd === "stack") {
       push([{ type: "out", text: "React · Vue 2 · TypeScript · Kotlin · Jetpack Compose · Node.js · MQTT. el resto en [ 04 ]." }]);
     } else if (cmd === "cafe" || cmd === "café") {
-      const n = bumpCoffees();
-      push([{ type: "out", text: `☕ le invitaste un café virtual a Gabo. total acumulado: ${n}. (no reemplaza uno real, che)` }]);
+      push([{ type: "out", text: "☕ café virtual servido. no reemplaza uno real, che: escribime y lo tomamos en serio." }]);
     } else if (cmd === "play") {
       const genre = personal.musica[Math.floor(Math.random() * personal.musica.length)];
       push([

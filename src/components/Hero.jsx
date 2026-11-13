@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope, FaDownload, FaCoffee } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope, FaDownload } from "react-icons/fa";
 import { Marquee, Equalizer } from "./Shared";
 import { perfil, personal } from "../data/content";
-import { getOrIncrementVisits, bumpCoffees, getCoffees } from "../utils/visits";
 
 const ROLES = [
   "Front-end Developer",
@@ -79,20 +78,6 @@ export default function Hero() {
   const time = useClock();
   const genre = useRotatingGenre();
   const [copied, setCopied] = useState(false);
-  const [visits, setVisits] = useState(1);
-  const [coffees, setCoffees] = useState(0);
-  const [bump, setBump] = useState(false);
-
-  useEffect(() => {
-    setVisits(getOrIncrementVisits());
-    setCoffees(getCoffees());
-  }, []);
-
-  const invitarCafe = () => {
-    setCoffees(bumpCoffees());
-    setBump(true);
-    setTimeout(() => setBump(false), 350);
-  };
 
   const copyEmail = () => {
     navigator.clipboard.writeText(perfil.email);
@@ -164,15 +149,6 @@ export default function Hero() {
               email copiado ✓
             </span>
           )}
-
-          <button
-            onClick={invitarCafe}
-            className={`flex items-center gap-2 font-mono text-xs px-4 py-2.5 rounded-full border border-neonyellow/50 text-neonyellow hover:bg-neonyellow/10 transition ${
-              bump ? "scale-110" : "scale-100"
-            }`}
-          >
-            <FaCoffee /> invitame un café{coffees > 0 ? ` (${coffees})` : ""}
-          </button>
         </div>
 
         <dl className="hud-readout mt-14 grid grid-cols-2 lg:grid-cols-5 font-mono text-xs max-w-5xl">
@@ -184,7 +160,7 @@ export default function Hero() {
               <Equalizer /> {genre.toUpperCase()}
             </span>
           </Readout>
-          <Readout label="VISITAS DESDE ACÁ" value={`#${visits}`} tone="text-neongreen" />
+          <Readout label="STACK" value="REACT · VUE · KOTLIN" tone="text-neongreen" wide />
         </dl>
       </div>
 
@@ -208,9 +184,9 @@ export default function Hero() {
   );
 }
 
-function Readout({ label, value, tone = "text-white/85", children }) {
+function Readout({ label, value, tone = "text-white/85", wide = false, children }) {
   return (
-    <div className="px-4 py-3 border border-neoncyan/15 -ml-px -mt-px bg-void/40">
+    <div className={`px-4 py-3 border border-neoncyan/15 -ml-px -mt-px bg-void/40 ${wide ? "col-span-2 lg:col-span-1" : ""}`}>
       <dt className="text-[10px] tracking-widest text-white/40 mb-1">{label}</dt>
       <dd className={tone}>{children ?? value}</dd>
     </div>
