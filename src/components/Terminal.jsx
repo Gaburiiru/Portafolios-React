@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FaTerminal, FaTimes } from "react-icons/fa";
 import { getVisits, bumpCoffees } from "../utils/visits";
+import { personal } from "../data/content";
 
 const JOKES = [
   "¿Por qué el programador se quedó sin batería? Porque dejó el debugger corriendo toda la noche.",
@@ -16,6 +17,7 @@ const COMMANDS = [
   "stack",
   "cafe",
   "chiste",
+  "play",
   "sudo hire-me",
   "whoami",
   "clear",
@@ -49,6 +51,20 @@ export default function Terminal() {
       setTimeout(() => inputRef.current?.focus(), 50);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
+
+  // La tecla ~ (o `) abre la terminal, como la consola de los juegos, salvo que estés escribiendo en un campo
+  useEffect(() => {
+    if (open) return;
+    const onKey = (e) => {
+      const typing = ["INPUT", "TEXTAREA"].includes(document.activeElement?.tagName);
+      if (!typing && (e.key === "~" || e.key === "`")) {
+        e.preventDefault();
+        setOpen(true);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
   useEffect(() => {
@@ -88,7 +104,7 @@ export default function Terminal() {
         {
           type: "out",
           text:
-            "comandos: help · sobre-mi · proyectos · stack · cafe · chiste · sudo hire-me · whoami · clear · exit",
+            "comandos: help · sobre-mi · proyectos · stack · cafe · chiste · play · sudo hire-me · whoami · clear · exit",
         },
       ]);
     } else if (cmd === "sobre-mi") {
@@ -105,6 +121,12 @@ export default function Terminal() {
     } else if (cmd === "cafe" || cmd === "café") {
       const n = bumpCoffees();
       push([{ type: "out", text: `☕ le invitaste un café virtual a Gabo. total acumulado: ${n}. (no reemplaza uno real, che)` }]);
+    } else if (cmd === "play") {
+      const genre = personal.musica[Math.floor(Math.random() * personal.musica.length)];
+      push([
+        { type: "out", text: `♪ cargando playlist... modo ${genre.toLowerCase()} activado.` },
+        { type: "out", text: "▮▮▮▯▯ ▮▮▮▮▯ ▮▮▯▯▯ ▮▮▮▮▮ — de fondo mientras programo. y sí, también grabo covers." },
+      ]);
     } else if (cmd === "chiste") {
       push([{ type: "out", text: JOKES[Math.floor(Math.random() * JOKES.length)] }]);
     } else if (cmd === "sudo hire-me" || cmd === "sudo hireme") {
@@ -177,9 +199,12 @@ export default function Terminal() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="fixed bottom-5 right-5 z-40 flex items-center gap-2 font-mono text-xs px-4 py-3 rounded-full bg-void border border-neonpink/60 text-neonpink shadow-neonpink hover:bg-neonpink/10 transition animate-flicker"
+        aria-label="Abrir la terminal"
+        className="fixed bottom-5 right-5 z-40 flex items-center gap-2 font-mono text-xs p-3 sm:px-4 rounded-full bg-void/90 backdrop-blur border border-neonpink/60 text-neonpink shadow-neonpink hover:bg-neonpink hover:text-void transition"
       >
-        <FaTerminal /> tocá acá 👾
+        <FaTerminal size={14} />
+        <span className="hidden sm:inline">abrí la terminal</span>
+        <kbd className="hidden sm:inline border border-current/40 rounded px-1 text-[10px] opacity-70">~</kbd>
       </button>
 
       {open && (

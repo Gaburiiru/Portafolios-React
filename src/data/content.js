@@ -31,8 +31,8 @@ export const perfil = {
   feedback claro en el medio, mejor: para mí ahí es donde un proyecto realmente despega.`,
   ahoraMismo: [
     "Cerrando la Tecnicatura en Desarrollo de Aplicaciones Móviles (UNLaM)",
-    "Escribiendo React + TypeScript y Vue 2 en producción, sin despeinarme (casi)",
-    "Metiéndole mano a Kotlin Multiplatform y Jetpack Compose los fines de semana",
+    "Trabajando en el cliente Android nativo de mi proyecto final, en equipo",
+    "Metiéndole mano a Kotlin Multiplatform (Capricho corre en Android e iOS) y a React Native",
   ],
 };
 
@@ -88,9 +88,32 @@ export const experiencia = [
 
 export const proyectosMovil = [
   {
+    id: "movil-capricho",
+    nombre: "Capricho",
+    tecnology: ["Kotlin Multiplatform", "Compose Multiplatform", "Supabase", "Clean Architecture", "IA"],
+    type: "Challenge · Android + iOS",
+    image: null,
+    url: null,
+    git: "https://github.com/Gaburiiru/capricho",
+    description:
+      "Finanzas sin culpa: antes de darte un gusto te dice cuánto pesa en tu sueldo y en tus metas. Código compartido Android/iOS, estrategia de ahorro con IA, modo sin conexión, una mascota pixel art con 11 estados de ánimo y 149 tests.",
+  },
+  {
+    id: "movil-melodya",
+    nombre: "Melodya",
+    tecnology: ["Kotlin", "Jetpack Compose", "Clean Architecture", "Corrutinas / Flow", "Retrofit"],
+    type: "Proyecto final · Android",
+    image: null,
+    url: null,
+    git: null,
+    nota: "Repo privado del equipo · lo muestro en una entrevista",
+    description:
+      "Proyecto final en equipo: una plataforma para crear canciones a partir de una idea. Trabajo en el cliente Android nativo: arquitectura en capas, sesión cifrada, reproducción en segundo plano, notificaciones y CI con lint y tests.",
+  },
+  {
     id: "movil-1",
     nombre: "Games Break",
-    tecnology: ["Kotlin", "Android Studio", "XML", "RecyclerView", "Glide"],
+    tecnology: ["Java", "XML", "Activities / Fragments", "RecyclerView", "Glide"],
     type: "APK · Android",
     image: gamesBreak,
     url: "https://drive.google.com/file/d/1SHjqRbxYYgpaTtYnFtmHPxdteRPBECZS/view?usp=sharing",
@@ -116,7 +139,7 @@ export const proyectosMovil = [
     type: "App nativa · Android",
     image: null,
     url: null,
-    git: null,
+    git: "https://github.com/Gaburiiru/PawFinder",
     description:
       "Búsqueda, reporte y reunificación de mascotas perdidas por geolocalización en tiempo real, con mapa interactivo comunitario. Firebase (Auth, Firestore, Storage) como backend, cámara y permisos de ubicación en runtime.",
   },

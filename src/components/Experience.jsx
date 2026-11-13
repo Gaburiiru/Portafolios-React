@@ -8,10 +8,15 @@ function ProyectoDigicard({ proyecto, defaultOpen }) {
     <div className="neon-card rounded-xl p-5 sm:p-6">
       <button
         onClick={() => setOpen((o) => !o)}
-        className="w-full flex items-center justify-between gap-4 text-left"
+        aria-expanded={open}
+        className="w-full flex items-center justify-between gap-4 text-left group"
       >
-        <h4 className="font-display text-lg sm:text-xl text-white">{proyecto.nombre}</h4>
-        <span className="text-neonpink font-mono text-xl leading-none">{open ? "–" : "+"}</span>
+        <h4 className="font-display text-lg sm:text-xl text-white group-hover:text-neoncyan transition">
+          {proyecto.nombre}
+        </h4>
+        <span className="shrink-0 w-8 h-8 grid place-items-center rounded border border-neonpink/50 text-neonpink font-mono text-lg leading-none group-hover:bg-neonpink group-hover:text-void transition">
+          {open ? "–" : "+"}
+        </span>
       </button>
 
       <div className="flex flex-wrap gap-2 mt-3">
@@ -54,9 +59,9 @@ export default function Experience() {
 
           <p className="text-white/70 mb-8 leading-relaxed max-w-3xl">{exp.resumen}</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {exp.proyectos.map((p) => (
-              <ProyectoDigicard key={p.nombre} proyecto={p} defaultOpen={true} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
+            {exp.proyectos.map((p, i) => (
+              <ProyectoDigicard key={p.nombre} proyecto={p} defaultOpen={i === 0} />
             ))}
           </div>
         </div>

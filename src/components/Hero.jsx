@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope, FaDownload, FaCoffee } from "react-icons/fa";
-import { Marquee } from "./Shared";
-import { perfil } from "../data/content";
+import { Marquee, Equalizer } from "./Shared";
+import { perfil, personal } from "../data/content";
 import { getOrIncrementVisits, bumpCoffees, getCoffees } from "../utils/visits";
 
 const ROLES = [
@@ -62,9 +62,22 @@ function useClock() {
   return time;
 }
 
+const GENRE_MILLIS = 2600;
+
+/** Recorre los géneros que escucho, uno cada pocos segundos. */
+function useRotatingGenre() {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setIndex((i) => (i + 1) % personal.musica.length), GENRE_MILLIS);
+    return () => clearInterval(id);
+  }, []);
+  return personal.musica[index];
+}
+
 export default function Hero() {
   const typed = useTypedRoles();
   const time = useClock();
+  const genre = useRotatingGenre();
   const [copied, setCopied] = useState(false);
   const [visits, setVisits] = useState(1);
   const [coffees, setCoffees] = useState(0);
@@ -92,8 +105,9 @@ export default function Hero() {
       {/* Fondo synthwave */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-[#150a2e] via-[#0a0316] to-[#0a0316]" />
-        <div className="sun animate-flicker" />
+        <div className="sun hero-sun animate-flicker" />
         <div className="grid-floor" />
+        <div className="hero-scrim absolute inset-0" />
       </div>
 
       <div className="relative z-10 flex-1 flex flex-col justify-center max-w-6xl w-full mx-auto px-5 pt-28 pb-16">
@@ -128,7 +142,7 @@ export default function Hero() {
           </a>
           <a
             href="#proyectos"
-            className="font-mono text-sm px-5 py-3 rounded border border-neoncyan/60 text-neoncyan hover:bg-neoncyan/10 hover:shadow-neoncyan transition"
+            className="font-mono text-sm px-5 py-3 rounded border border-neoncyan/60 bg-void/60 text-neoncyan hover:bg-neoncyan/10 hover:shadow-neoncyan transition"
           >
             Ver proyectos
           </a>
@@ -161,15 +175,17 @@ export default function Hero() {
           </button>
         </div>
 
-        <div className="mt-14 flex flex-wrap gap-x-10 gap-y-3 font-mono text-xs text-white/50">
-          <span>ROL <span className="text-white/80">DEV FRONT-END / ANDROID</span></span>
-          <span>UBICACIÓN <span className="text-white/80">{perfil.ubicacion.toUpperCase()}</span></span>
-          <span>STACK <span className="text-white/80">REACT · VUE · TYPESCRIPT · KOTLIN</span></span>
-          <span>HORA LOCAL <span className="text-neonpink">{time}</span></span>
-          <span>
-            SOS LA VISITA <span className="text-neongreen">#{visits}</span> ACÁ
-          </span>
-        </div>
+        <dl className="hud-readout mt-14 grid grid-cols-2 lg:grid-cols-5 font-mono text-xs max-w-5xl">
+          <Readout label="ROL" value="DEV FRONT-END / ANDROID" />
+          <Readout label="UBICACIÓN" value={perfil.ubicacion.toUpperCase()} />
+          <Readout label="HORA LOCAL" value={time} tone="text-neonpink" />
+          <Readout label="EN LOOP">
+            <span className="flex items-center gap-2 text-neoncyan">
+              <Equalizer /> {genre.toUpperCase()}
+            </span>
+          </Readout>
+          <Readout label="VISITAS DESDE ACÁ" value={`#${visits}`} tone="text-neongreen" />
+        </dl>
       </div>
 
       <div className="relative z-10">
@@ -189,6 +205,15 @@ export default function Hero() {
         />
       </div>
     </section>
+  );
+}
+
+function Readout({ label, value, tone = "text-white/85", children }) {
+  return (
+    <div className="px-4 py-3 border border-neoncyan/15 -ml-px -mt-px bg-void/40">
+      <dt className="text-[10px] tracking-widest text-white/40 mb-1">{label}</dt>
+      <dd className={tone}>{children ?? value}</dd>
+    </div>
   );
 }
 
