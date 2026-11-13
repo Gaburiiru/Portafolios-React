@@ -1,6 +1,6 @@
 import React from "react";
 import { FaMusic, FaGamepad } from "react-icons/fa";
-import { SectionHeader, Badge } from "./Shared";
+import { SectionHeader, Badge, Equalizer } from "./Shared";
 import { personal } from "../data/content";
 
 export default function Personal() {
@@ -16,7 +16,7 @@ export default function Personal() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
         <div className="neon-card rounded-xl p-6">
           <p className="flex items-center gap-2 font-mono text-xs tracking-widest text-neonpink mb-4">
-            <FaMusic /> EN LOOP
+            <FaMusic /> EN LOOP <Equalizer className="ml-1" />
           </p>
           <div className="flex flex-wrap gap-2">
             {personal.musica.map((g) => (

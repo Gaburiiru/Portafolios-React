@@ -1,46 +1,16 @@
-# Gabriel Ricardes — Portfolio
+# GABO.DEV · Portafolio de Gabriel Ricardes
 
-Portfolio personal con estética cyberpunk / vaporwave / retro-future.
+**🌐 [gabriel-ricardes-portafolio.netlify.app](https://gabriel-ricardes-portafolio.netlify.app/Home)**
 
-## Stack del sitio
-- React 18 + Vite
-- Tailwind CSS
-- react-icons
+Mi portafolio personal: quién soy, dónde trabajé, qué construí y qué uso, con una estética **cyberpunk / synthwave** de visor HUD.
 
-## Desarrollo local
+## Qué tiene de distinto
 
-```bash
-npm install
-npm run dev
-```
+- **Arranque de sistema:** una pantalla de "boot" con humor antes de entrar.
+- **Terminal escondida:** abrila con el botón o con la tecla `~` y probá `help`, `play` o `sudo hire-me`.
+- **Visor HUD:** títulos que se descifran al aparecer, paneles con esquinas cortadas y un tablero con hora local y lo que estoy escuchando.
+- **Accesible:** con "reducir movimiento" activado en el sistema, las animaciones se quedan quietas.
 
-## Build de producción
+## Hecho con
 
-```bash
-npm run build
-```
-Esto genera la carpeta `dist/` lista para deployar.
-
-## Deploy en Netlify
-
-Ya incluye `public/_redirects` para que el ruteo funcione en Netlify.
-
-**Opción A — Drag & drop:**
-1. `npm run build`
-2. Entrá a tu sitio en Netlify → pestaña "Deploys" → arrastrá la carpeta `dist/` al área de deploy manual.
-
-**Opción B — Conectado a Git (recomendado):**
-1. Subí este proyecto a un repo de GitHub/GitLab.
-2. En Netlify: "Site settings" → "Build & deploy" → conectá el repo.
-3. Build command: `npm run build`
-4. Publish directory: `dist`
-5. Cada push a la rama principal redeploya solo.
-
-## Editar contenido
-
-Todo el contenido (perfil, experiencia, proyectos, stack, educación) vive en:
-`src/data/content.js`
-
-Para cambiar textos, agregar proyectos nuevos o actualizar el stack, editá ese archivo — los componentes de `src/components/` lo consumen automáticamente.
-
-El CV en PDF se sirve desde `public/Gabriel_Ricardes_CV.pdf` (el botón "Descargar CV" apunta ahí).
+React 18 · Vite · Tailwind CSS · react-icons. Desplegado en Netlify.
